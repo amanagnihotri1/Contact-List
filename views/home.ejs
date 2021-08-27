@@ -1,0 +1,40 @@
+<html>
+   <head>
+      <script src="https://kit.fontawesome.com/aae7ef59b3.js" crossorigin="anonymous"></script>
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="views\assests\css\home.css">
+      <title>
+        <%=locals.title%> 
+      </title>
+   </head> 
+    
+    <body style="text-align: center; position: relative;background-size: cover;  background-repeat: no-repeat; overflow-x: hidden; background-image: url(https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Simple-Blue-White-Background-Image.jpg);">
+   <div style="background-color: rgba(38, 0, 255, 0.651); width: 440px; height: 100px; text-align: center;left:535px;position: relative;">
+   <i class="far fa-address-book" style="color:rgb(255, 250, 250); font-size: 40px; position:absolute; left:2vw; top:4vh;"></i>
+   <h1 style="font-size:40px; color:rgb(255, 255, 255);position: absolute; top:-3vh;left: 6vw; text-align: center; font-family: 'Montserrat', sans-serif; padding-top: 20px;">My Contact List</h1>
+   </div>
+   <ul style="width: 440px; list-style: none; left: 495px;  position: relative;">
+ <% for(let i of contact_list){%>
+<li class="cont" style="width: 440px;">
+<div style="display: flex; justify-content:space-between; background-color: rgb(255, 255, 255); position:relative; padding: 0; box-shadow: 0px 5px 10px rgba(99, 91, 91, 0.438);">
+   <p style="font-family: 'Montserrat',sans-serif; font-size: 20px; font-weight: 600; padding-left:15px;color: rgba(38, 0, 255,0.651); "><%=i.name %></p>
+<p style="font-family: 'Montserrat', sans-serif; text-align: justify;font-weight: 600; padding-top: 8px; padding-right: 55px;color:rgba(38, 0, 255, 0.651)  "><%=i.phone %></p>
+
+</div>
+<div class="del-button">
+ <a href="/delete-contact/?id=<%=i.id%>"><i class="fas fa-times" style="font-size: 25px;left:200px; top:-45px; position: relative; margin: 0;"></i></a>
+</div>
+</li>
+<%}%>   
+</ul>
+<form action="/" method="post" style="margin-top: 10px;">
+   <input style="width:200px; height: 40px;" type="text" name="name" placeholder="Enter Name" required>
+   <input style="width: 200px; height: 40px;" type="number" name="number" placeholder="Enter Number" required>
+   <button style="background-color: darkgoldenrod; border-radius: 4px; color: white; width: 90px; height: 40px;" type="submit">Add</button>
+</form>
+
+</body>
+</html>

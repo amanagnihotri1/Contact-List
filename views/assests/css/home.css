@@ -1,0 +1,17 @@
+body{
+    text-align: center;
+    background-image: url(https://static.wixstatic.com/media/da8b27_899e25a199524cbd84b8ed9b82404bc4~mv2.jpeg/v1/fill/w_1000,h_941,al_c,q_90,usm_0.66_1.00_0.01/da8b27_899e25a199524cbd84b8ed9b82404bc4~mv2.jpeg);
+  }
+ 
+#mheading
+{
+    text-align: center;
+    margin-top: 25px;
+    color: grey;
+
+}
+.cont
+{
+  width: 340px;
+  background-color:blueviolet ;
+}
