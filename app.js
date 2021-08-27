@@ -11,7 +11,7 @@ app.use(express.urlencoded({extended:true}));
 //To Get All Contacts From Database
 app.get("/",function(req,res)
 { 
-  Contact.find({},function(err,contacts)
+  Contact.find(function(err,contacts)
   {
     if(err)
     {
@@ -50,7 +50,7 @@ let id=req.query.id;
     return res.redirect('back');
   });
 });
-app.listen(3000,function(err)
+app.listen(process.env.PORT || 3000,function(err)
 {
     if(err)
     {console.log("code fat gaya");}
